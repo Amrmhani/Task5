@@ -16,6 +16,12 @@
     gap: 60px;
     list-style: none;
 }
+.list a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
 
 .icons ul {
     display: flex;
@@ -28,7 +34,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    margin-top: 80px;
     padding-top: 40px;
     padding-bottom: 40px;
     margin: 0 165px;
