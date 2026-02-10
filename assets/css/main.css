@@ -4,11 +4,25 @@
     box-sizing: border-box;
 }
 
+html {
+    --PrimaryColor: #19213D;
+    --primaryFont: Inter;
+}
+
 .navbar {
-    display: flex;
-    gap: 232.5px;
     padding: 21.84px 0;
-    margin: 0 165px;
+}
+
+.container {
+    width: calc(100% - 330px);
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .list ul {
@@ -16,6 +30,7 @@
     gap: 60px;
     list-style: none;
 }
+
 .list a {
     text-decoration: none;
     color: #000;
@@ -28,21 +43,66 @@
     list-style: none;
     gap: 24px;
 }
+.menu{
+    display: none;
+}
+@media screen  and (max-width:821px){
+    .list {
+        display: none;
+    }
+    .icons {
+        display: none;
+    }
+    .menu{
+        width: 90px;
+        height: 40px;
+        display: flex;
+    }
+}
 
 .items {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
     gap: 30px;
     padding-top: 40px;
     padding-bottom: 40px;
-    margin: 0 165px;
 }
 
 .item {
     width: calc((100% - 90px)/4);
+    text-align: center;
 }
 
+@media screen and (max-width:767px) {
+    .items .row{
+        flex-direction: column;
+    } 
+    
+    .item{
+        width: 100%;
+    }
+    
+}
+@media screen and (min-width:768px) and (max-width:991px) 
+{
+.item{
+    width: calc((100% - 30px) / 2);
+}
+}
 img {
     width: 100%;
 }
+
+a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: var(--primaryFont);
+    color: var(--PrimaryColor);
+}
+
+h2 {
+    text-transform: uppercase;
+    color: var(--PrimaryColor);
+}
+
+/* overflow حل مشكلة float */
+/* clear  حل مشكلة float */
+
