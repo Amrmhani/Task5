@@ -46,7 +46,15 @@ html {
 .menu{
     display: none;
 }
-@media screen  and (max-width:996px){
+@media screen and (max-width: 576px) {
+    .menu {
+        display: flex;
+        width: 50px;
+        height: 40px;
+    }
+
+}
+@media screen  and (min-width:0) and (max-width:996px){
     .list {
         display: none;
     }
@@ -71,7 +79,7 @@ html {
     text-align: center;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (min-width:0) and (max-width:767px) {
     .items .row{
         flex-direction: column;
     } 
