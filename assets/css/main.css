@@ -8,9 +8,22 @@ html {
     --PrimaryColor: #19213D;
     --primaryFont: Inter;
 }
-
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: "EB Garamond", serif;
+} */
 .navbar {
     padding: 21.84px 0;
+}
+.navbar a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: var(--primaryFont);
+    color: var(--PrimaryColor);
 }
 
 .container {
@@ -43,9 +56,11 @@ html {
     list-style: none;
     gap: 24px;
 }
-.menu{
+
+.menu {
     display: none;
 }
+
 @media screen and (max-width: 576px) {
     .menu {
         display: flex;
@@ -54,14 +69,17 @@ html {
     }
 
 }
-@media screen  and (min-width:0) and (max-width:996px){
+
+@media screen and (min-width:0) and (max-width:996px) {
     .list {
         display: none;
     }
+
     .icons {
         display: none;
     }
-    .menu{
+
+    .menu {
         width: 90px;
         height: 40px;
         display: flex;
@@ -78,39 +96,112 @@ html {
     width: calc((100% - 90px)/4);
     text-align: center;
 }
-
-@media screen and (min-width:0) and (max-width:767px) {
-    .items .row{
-        flex-direction: column;
-    } 
-    
-    .item{
-        width: 100%;
-    }
-    
-}
-@media screen and (min-width:768px) and (max-width:991px) 
-{
-.item{
-    width: calc((100% - 30px) / 2);
-}
-}
-img {
-    width: 100%;
-}
-
-a {
-    text-decoration: none;
-    font-size: 14px;
-    font-family: var(--primaryFont);
-    color: var(--PrimaryColor);
-}
-
-h2 {
+.items h2 {
     text-transform: uppercase;
     color: var(--PrimaryColor);
 }
+@media screen and (min-width:0) and (max-width:767px) {
+    .items .row {
+        flex-direction: column;
+    }
 
+    .item {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .item {
+        width: calc((100% - 30px) / 2);
+    }
+}
+
+img {
+    width: 100%;
+}
+ .best-saller {
+    background-color: #FFFFF3;
+    text-align: center;
+    padding: 80px 0;
+ }
+ .best-saller .row{
+    display: flex;
+  gap: 30px;
+  align-items: stretch;
+ }
+ .best-saller .item{
+ text-align: left;
+ width: calc((100% -90px ) / 4);
+ display: flex;
+  flex-direction: column;
+  height: 100%;
+ }
+.best-saller h2{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+
+ .best-saller .saller-info{
+    margin-top: 24px;
+ }
+.best-saller h3{
+   font-size: 20px;
+   font-weight: 500;
+   text-transform: uppercase;
+   margin-bottom: 12px;
+}
+.best-saller .price{
+ font-size: 20px;
+   font-weight: 500;
+}
+.best-saller .describtion{
+    color: #807F86;
+    width: 80%;
+    line-height: 22px;
+    margin-top: 24px;
+    margin-bottom: 34px;
+}
+.best-saller .Add_To_Cart{
+   
+    padding: 15px 81px;
+    background-color: #fff;
+    border: 1px solid #000;
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+
+}
+
+@media screen and (min-width:0) and (max-width:767px) {
+   
+    /* كل كرت بعرض كامل */
+    .best-saller .item{
+        width: 100%;
+        text-align: center;
+    }
+
+    
+    .best-saller .saller-img{
+        width: 100%;
+    }
+    .best-saller .saller-info{
+        margin-top: 16px;
+        text-align: center;
+    }
+
+    
+    .best-saller .describtion{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    
+   
+}
 /* overflow حل مشكلة float */
 /* clear  حل مشكلة float */
-
