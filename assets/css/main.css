@@ -1,3 +1,6 @@
+/* flex: flex-grow flex-shrink width */
+/* overflow حل مشكلة float */
+/* clear حل مشكلة float */
 * {
     margin: 0;
     padding: 0;
@@ -8,17 +11,20 @@ html {
     --PrimaryColor: #19213D;
     --primaryFont: Inter;
 }
-/* h1,
+
+h1,
 h2,
 h3,
 h4,
 h5,
-h6{
-  font-family: "EB Garamond", serif;
-} */
+h6 {
+    font-family: "EB Garamond", serif;
+}
+
 .navbar {
     padding: 21.84px 0;
 }
+
 .navbar a {
     text-decoration: none;
     font-size: 14px;
@@ -27,10 +33,10 @@ h6{
 }
 
 .container {
-    width: calc(100% - 330px);
+    width: 90%;
+    max-width: 1200px; 
     margin: 0 auto;
 }
-
 .row {
     display: flex;
     justify-content: space-between;
@@ -50,7 +56,6 @@ h6{
     font-weight: 500;
 }
 
-
 .icons ul {
     display: flex;
     list-style: none;
@@ -61,28 +66,218 @@ h6{
     display: none;
 }
 
-@media screen and (max-width: 576px) {
-    .menu {
-        display: flex;
-        width: 50px;
-        height: 40px;
+@media (max-width: 576px) {
+    .list{
+        display: none;
+    }
+    .navbar .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
+  }
+    .menu{
+    display: flex;
+    order: 1;
+    width: 20px;
+    height: 20px;
+    justify-content: flex-start;
+  }
+  .menu img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+    .logo{
+    order: 2;
+    flex: 1;                 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }
+  .logo img{
+    width: 125.5px;
+    height: auto;
+    display: block;
+  }
+
+     .icons{
+    order: 3;
+  }
+  .icons ul{
+    display: flex;
+    gap: 0;
+  }
+
+    .icons ul li {
+        display: none;
     }
 
+    .icons ul li.Shop {
+        display: block;
+    }
+
+    .icons ul li.Shop img {
+        width: 24px;
+        height: 24px;
+        display: block;
+            object-fit: contain;
+
+    }
 }
 
-@media screen and (min-width:0) and (max-width:996px) {
+@media screen and (min-width: 577px) and (max-width: 996px) {
+   
+    .navbar .row {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+ 
     .list {
         display: none;
     }
 
-    .icons {
-        display: none;
+    .menu {
+       
+        display: flex;
+        flex: 1; 
+        justify-content: flex-start;
+        align-items: center;
+    }
+   .menu img{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+   }
+    
+    .logo {
+        flex: 0 0 auto; 
+        display: flex;
+        justify-content: center;
     }
 
-    .menu {
-        width: 90px;
-        height: 40px;
+    .logo img {
+        width: 125.5px;
+        height: auto;
+    }
+
+
+    .icons {
         display: flex;
+        flex: 1; 
+        justify-content: flex-end;
+    }
+
+    .icons ul li {
+        display: none; 
+    }
+
+    .icons ul li.Shop {
+        display: block; 
+    }
+
+    .icons ul li.Shop img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.hero_section {
+    display: flex;
+    height: 640px;
+    position: relative;
+}
+
+.hero_img {
+    flex: 1;
+}
+
+.hero_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero_box {
+    position: absolute;
+    top: 0;
+    left: 165px;
+    width: 420px;
+    height: 640px;
+    gap: 42px;
+    background: #826F66;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_box .hero_text {
+    text-align: center;
+    color: #FFFDFB;
+}
+
+.hero_box .icon {
+    width: 85.43px;
+    height: 81.24px;
+    margin-bottom: 42px;
+}
+
+.hero_box h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero_box h1 {
+    font-size: 36px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.hero_box button {
+    width: 220px;
+    height: 40px;
+    background: #FFFFFF;
+    color: #826F66;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-weight: 500;
+    gap: 3px;
+}
+
+@media (max-width: 768px) {
+    .hero_section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero_img img {
+        height: 398px;
+    }
+
+    .hero_box {
+        position: static;
+        width: 100%;
+        height: 354px;
+        left: auto;
+        top: auto;
+    }
+
+    .hero_box .icon {
+        width: 50.04px;
+        height: 47.59px;
+        transform: translateY(45px);
+    }
+
+    .hero_box button {
+        transform: translatey(-30px);
     }
 }
 
@@ -96,11 +291,13 @@ h6{
     width: calc((100% - 90px)/4);
     text-align: center;
 }
+
 .items h2 {
     text-transform: uppercase;
     color: var(--PrimaryColor);
 }
-@media screen and (min-width:0) and (max-width:767px) {
+
+@media screen and (min-width:0) and (max-width:576px) {
     .items .row {
         flex-direction: column;
     }
@@ -108,10 +305,9 @@ h6{
     .item {
         width: 100%;
     }
-
 }
 
-@media screen and (min-width:768px) and (max-width:991px) {
+@media screen and (min-width:577px) and (max-width:991px) {
     .item {
         width: calc((100% - 30px) / 2);
     }
@@ -120,88 +316,96 @@ h6{
 img {
     width: 100%;
 }
- .best-saller {
+
+.best-saller {
     background-color: #FFFFF3;
     text-align: center;
     padding: 80px 0;
- }
- .best-saller .row{
+}
+
+.best-saller .row {
     display: flex;
-  gap: 30px;
-  align-items: stretch;
- }
- .best-saller .item{
- text-align: left;
- width: calc((100% -90px ) / 4);
- display: flex;
-  flex-direction: column;
-  height: 100%;
- }
-.best-saller h2{
+    gap: 30px;
+    align-items: stretch;
+}
+
+.best-saller .item {
+    text-align: left;
+    width: calc((100% - 90px) / 4); 
+    display: flex;
+    flex-direction: column;
+    height: auto; 
+}
+
+.best-saller h2 {
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 48px;
 }
 
- .best-saller .saller-info{
+.best-saller .saller-info {
     margin-top: 24px;
- }
-.best-saller h3{
-   font-size: 20px;
-   font-weight: 500;
-   text-transform: uppercase;
-   margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
 }
-.best-saller .price{
- font-size: 20px;
-   font-weight: 500;
+
+.best-saller h3 {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 12px;
 }
-.best-saller .describtion{
+
+.best-saller .price {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.best-saller .describtion {
     color: #807F86;
     width: 80%;
     line-height: 22px;
     margin-top: 24px;
     margin-bottom: 34px;
+    flex-grow: 1; 
 }
-.best-saller .Add_To_Cart{
-   
-    padding: 15px 81px;
+
+.best-saller .Add_To_Cart {
+    padding: 15px 0; 
     background-color: #fff;
     border: 1px solid #000;
     letter-spacing: 4px;
     font-size: 14px;
     font-weight: 600;
     width: 100%;
-
+    margin-top: auto; 
 }
 
-@media screen and (min-width:0) and (max-width:767px) {
-   
-    /* كل كرت بعرض كامل */
-    .best-saller .item{
+@media (max-width:576px) {
+    .best-saller .item {
         width: 100%;
         text-align: center;
     }
 
-    
-    .best-saller .saller-img{
+    .best-saller .saller-img {
         width: 100%;
     }
-    .best-saller .saller-info{
+
+    .best-saller .saller-info {
         margin-top: 16px;
         text-align: center;
     }
 
-    
-    .best-saller .describtion{
+    .best-saller .describtion {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
-
-    
-   
 }
-/* overflow حل مشكلة float */
-/* clear  حل مشكلة float */
+@media screen and (min-width:577px) and (max-width:991px){
+ .best-saller .item{
+    width: calc((100% - 30px) / 2);
+ }
+}
