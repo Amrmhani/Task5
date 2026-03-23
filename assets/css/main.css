@@ -813,21 +813,18 @@ footer ul{
     padding: 0;
   }
 
-  /* About Us فوق */
   .footer-right .about {
     order: 1;
     width: 45%;
     text-align: center;
   }
 
-  /* Services بجانب About Us */
   .footer-right .services {
     order: 2;
     width: 45%;
     text-align: center;
   }
 
-  /* Portfolio تحتهم */
   .footer-right .portfolio {
     order: 3;
     width: 100%;
