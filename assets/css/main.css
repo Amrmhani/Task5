@@ -1,6 +1,16 @@
 /* flex: flex-grow flex-shrink width */
 /* overflow حل مشكلة float */
 /* clear حل مشكلة float */
+
+/*transition: للصور */
+/*position: fixed;*/
+/*background-image: ;*/
+/*height:100vh; --> ارتفاع الصفحة كاملة*/
+/*box-shadow:لصورة x y transition color--> (رقم)قيمة sprid--> قيمة(رقم)
+box-shadow: h-offset v-offset blur spread color inset;
+*/
+/*filter: drop-shadow();--> ظل للصورة من الداخل*/
+/*text-shadow:*/
 * {
     margin: 0;
     padding: 0;
@@ -123,7 +133,7 @@ h6 {
         width: 24px;
         height: 24px;
         display: block;
-            object-fit: contain;
+        object-fit: contain;
 
     }
 }
@@ -280,7 +290,38 @@ h6 {
         transform: translatey(-30px);
     }
 }
-
+.Discount{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+    background-color:#F7F6F5;
+}
+.Dis-img{
+    width: 100%px;
+}
+.container .text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+.text a{
+    color: #000;
+}
+@media (max-width: 1000px){
+    .container .Discount{
+        flex-direction: column;
+        text-align: center;
+    }
+    .text{
+        order: 1;
+    }
+    .container img{
+        order: 2;
+        margin: 0 auto;
+    }
+}
 .items {
     gap: 30px;
     padding-top: 40px;
@@ -316,9 +357,7 @@ h6 {
 img {
     width: 100%;
 }
-
 .best-saller {
-    background-color: #FFFFF3;
     text-align: center;
     padding: 80px 0;
 }
@@ -408,4 +447,395 @@ img {
  .best-saller .item{
     width: calc((100% - 30px) / 2);
  }
+}
+
+
+.About-section {
+    padding-top: 100px;
+}
+
+.About-section .About-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.About-row {
+    display: flex;
+    width: 100%;
+     margin: 0;      
+    padding: 0;     
+    gap: 0; 
+}
+
+.About-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.About-img,
+.text-img {
+    width: 50%;
+   height: 400px;
+    padding: 0;   
+    margin: 0; 
+}
+
+.About-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.text-img {
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.text-img a {
+    text-decoration: none;
+}
+
+
+.New-Added {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.New-Added .row {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.New-Added .item {
+    text-align: left;
+    width: calc((100% - 90px) / 4); 
+    display: flex;
+    flex-direction: column;
+    height: auto; 
+}
+
+.New-Added h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+
+.New-Added .img-info {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+.New-Added h3 {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.New-Added .price {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.New-Added .describtion {
+    color: #807F86;
+    width: 80%;
+    line-height: 22px;
+    margin-top: 24px;
+    margin-bottom: 34px;
+    flex-grow: 1; 
+}
+
+.New-Added .Add_To_Cart {
+    padding: 15px 0; 
+    background-color: #fff;
+    border: 1px solid #000;
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: auto; 
+}
+
+@media (max-width:576px) {
+    .New-Added .item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .New-Added .new-img {
+        width: 100%;
+    }
+
+    .New-Added .img-info {
+        margin-top: 16px;
+        text-align: center;
+    }
+
+    .New-Added .describtion {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width:577px) and (max-width:991px){
+ .New-Added .item{
+    width: calc((100% - 30px) / 2);
+ }
+}
+.OUR{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+    background-color:#F7F6F5;
+}
+.OUR-img{
+    width: 100%px;
+}
+.container .text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+.text a{
+    color: #000;
+}
+@media (max-width: 1000px){
+    .container .OUR{
+        flex-direction: column;
+        text-align: center;
+    }
+    .text{
+        order: 2;
+    }
+    .container img{
+        order: 1;
+        margin: 0 auto;
+    }
+}
+.signup-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.read-more {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.signup-content h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.signup-content h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    text-align: center; 
+}
+
+.input-box button {
+    width:60%;
+    padding: 12px 0;
+    color:#000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+   
+}
+
+.input-box button:hover {
+    opacity: 0.8;
+}
+
+
+footer{
+    background-color: #3A3845;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+footer p{
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 32px;
+}
+footer h4{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 7%;
+    text-transform: uppercase;
+    text-align: start;
+    margin-bottom: 20px;
+}
+footer a{
+    font-size: 14px;
+    font-weight: 200;
+    color: #E5E5E5;
+    text-decoration: none;
+}
+footer a:hover{
+    color: #826F66;
+}
+footer ul{
+    list-style: none;
+    gap:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+}
+.footer-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+}
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    height: auto;
+    padding: 48px 80px;
+}
+.footer-left img{
+    width: 145px;
+    height: 38.33px;
+    margin-bottom: 20px;
+}
+.footer-left button{
+    color: white;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 12%;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    background-color: var(--primary-color);
+    border: white 1px solid;
+    transition-property: background-color, color;
+    transition-duration: 0.6s;
+}
+.footer-left button:hover{
+    background-color: #c7bbb6;
+    color: white;
+    cursor: pointer;
+}
+.vertical{
+    width: 1px;
+    align-self: stretch;
+    background-color: #CAC9CF;
+}
+.footer-right{
+    display: flex;
+    justify-content: start;
+    align-items: space-between;
+    width: 100%;
+    padding: 48px 0px;
+    padding-left: 80px;
+}
+.footer-right .right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-right: 80px;
+}
+.horizontal{
+    width: 100%;
+    height: 1px;
+    background-color: #CAC9CF;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CAC9CF;
+    letter-spacing: 7%;
+    font-weight: 600;
+    gap: 10px;
+    padding: 32px 0;
+}
+.footer-bottom span{
+    color: #807F86;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+@media (max-width: 999px) {
+
+  .footer-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+  }
+
+  /* About Us فوق */
+  .footer-right .about {
+    order: 1;
+    width: 45%;
+    text-align: center;
+  }
+
+  /* Services بجانب About Us */
+  .footer-right .services {
+    order: 2;
+    width: 45%;
+    text-align: center;
+  }
+
+  /* Portfolio تحتهم */
+  .footer-right .portfolio {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer h4,
+  footer ul {
+    text-align: center;
+  }
 }
